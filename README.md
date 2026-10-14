@@ -2,6 +2,12 @@
 
 A tiny tip calculator + bill splitter built for **MLH Global Hack Week: Open Source — Challenge 1: Build a Mini App with Cursor**.
 
+## Screenshots
+
+| Light | Dark |
+| --- | --- |
+| ![Light mode](screenshots/light.png) | ![Dark mode](screenshots/dark.png) |
+
 ## Features
 
 - Enter a bill amount, pick a tip % (preset or custom)
