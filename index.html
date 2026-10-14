@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip Splitter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Tip Splitter</h1>
+      <button id="themeToggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <label for="bill">Bill amount (₹)</label>
+    <input id="bill" type="number" min="0" step="0.01" placeholder="0.00" inputmode="decimal" />
+
+    <label>Tip %</label>
+    <div class="tips" id="tipButtons">
+      <button type="button" data-tip="5">5%</button>
+      <button type="button" data-tip="10" class="active">10%</button>
+      <button type="button" data-tip="15">15%</button>
+      <button type="button" data-tip="20">20%</button>
+      <input id="customTip" type="number" min="0" max="100" placeholder="Custom" inputmode="numeric" />
+    </div>
+
+    <label for="people">Split between</label>
+    <div class="people">
+      <button type="button" id="minusPeople" aria-label="Fewer people">−</button>
+      <input id="people" type="number" min="1" value="1" inputmode="numeric" />
+      <button type="button" id="plusPeople" aria-label="More people">+</button>
+    </div>
+
+    <section class="results">
+      <div class="row"><span>Tip</span><strong id="tipAmount">₹0.00</strong></div>
+      <div class="row"><span>Total</span><strong id="total">₹0.00</strong></div>
+      <div class="row big"><span>Per person</span><strong id="perPerson">₹0.00</strong></div>
+    </section>
+
+    <p id="error" class="error" role="alert"></p>
+    <button id="reset" type="button" class="reset">Reset</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
